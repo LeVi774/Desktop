@@ -1,0 +1,59 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextPane;
+
+public class loginfrm extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					loginfrm frame = new loginfrm();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public loginfrm() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel 用户名 = new JLabel("\u7528\u6237\u540D\uFF1A\r\n\r\n");
+		用户名.setBounds(71, 85, 54, 15);
+		contentPane.add(用户名);
+		
+		JLabel lblNewLabel_1 = new JLabel("\u5BC6\u7801\uFF1A\r\n");
+		lblNewLabel_1.setBounds(71, 141, 54, 15);
+		contentPane.add(lblNewLabel_1);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setText("\u5728\u6B64\u8F93\u5165\u7528\u6237\u540D\r\n");
+		textPane.setBounds(135, 85, 117, 21);
+		contentPane.add(textPane);
+		
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setText("\u5728\u6B64\u8F93\u5165\u5BC6\u7801\u3002\r\n");
+		textPane_1.setBounds(122, 141, 132, 21);
+		contentPane.add(textPane_1);
+	}
+}
